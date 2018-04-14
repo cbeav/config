@@ -8,7 +8,7 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Swap [] 10
                         , Run Com "uname" ["-s","-r"] "" 36000
-                        , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                        , Run Date "%a %b %_d %Y %I:%M:%S" "date" 10
                         , Run StdinReader
                         , Run Com "/home/chris/.bullshit/wifimobar.sh" [] "wifi" 30
                         , Run Battery        [ "--template" , "<acstatus>"

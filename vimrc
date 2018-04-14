@@ -24,6 +24,7 @@ Plugin 'vim-scripts/CSApprox'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'AKurilin/matchit.vim'
+Plugin 'leafgarland/typescript-vim'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -36,7 +37,7 @@ Plugin 'pbrisbin/html-template-syntax'
 
 " !!! THIS REQUIRES A SEPARATE COMPILATION STEP
 Plugin 'Shougo/vimproc.vim'
-Plugin 'eagletmt/ghcmod-vim'
+" Plugin 'eagletmt/ghcmod-vim'
 
 " Markdown
 Plugin 'tpope/vim-markdown'
@@ -119,7 +120,7 @@ set nosmartindent
 set autoindent
 set smarttab
 set expandtab
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 
 " vertical and horizontal line highlighting
@@ -290,7 +291,8 @@ let g:haskell_conceal = 0
 " " Syntastic
 let g:syntastic_haskell_checkers = ['hlint']
 let g:syntastic_haskell_hlint_args = '-i "Eta reduce" -i "Use if"'
-
+let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+let g:syntastic_typescript_tslint_args = ['--fix']
 
 " == ghc-mod ==
 "
@@ -382,7 +384,7 @@ set splitright
 " relies on fzf binary being present on the PATH somewhere
 " NB: requires env var set in bashrc to use AG to find files, that way
 " .gitignore is respected
-nnoremap <leader>t :<C-u>FZF<cr>
+nnoremap <C-p> :Files `pwd`<cr>
 
 set t_Co=256
 

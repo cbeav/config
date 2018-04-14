@@ -1,0 +1,13 @@
+# Set background image with feh
+feh --bg-fill /usr/share/backgrounds/fitzroy.jpg &
+
+# Used by scripts to adjust screen brightness
+sudo chmod 666 /sys/class/backlight/intel_backlight/brightness &
+
+# Actually lock screen on laptop close
+xautolock &
+gnome-screensaver &
+
+# Disable PageUp/PageDown because they're too fucking close on XPS 13
+xmodmap -e 'keycode 112 = 0x0000' &
+xmodmap -e 'keycode 117 = 0x0000' &
