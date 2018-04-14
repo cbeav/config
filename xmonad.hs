@@ -18,21 +18,18 @@ defaults = def
             spawnOn "2" "google-chrome"
             spawnOn "3" "slack"
             spawnOn "9" "spotify"
-            execScriptHook "redshift"
-            execScriptHook "xautolock"
-            execScriptHook "gnome-screensaver"
         }
         `additionalKeysP`
-        [ ("<XF86MonBrightnessUp>", spawn "/home/chris/.bullshit/bright +")
-        , ("<XF86MonBrightnessDown>", spawn "/home/chris/.bullshit/bright -")
+        [ ("<XF86MonBrightnessUp>", spawn "/home/chris/.xmonad/scripts/brightness.pl +")
+        , ("<XF86MonBrightnessDown>", spawn "/home/chris/.xmonad/scripts/brightness.pl -")
         , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5+ unmute")
         , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5- unmute")
         , ("<XF86AudioMute>", spawn "amixer -D pulse set Master toggle")
         , ("<XF86AudioPlay>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
         , ("<XF86AudioPrev>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")
         , ("<XF86AudioNext>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
-        , ("M-<Left>", spawn "/home/chris/.bullshit/rotate.sh --left")
-        , ("M-<Right>", spawn "/home/chris/.bullshit/rotate.sh --right")
-        , ("M-<Up>", spawn "/home/chris/.bullshit/rotate.sh --up")
-        , ("M-<Down>", spawn "/home/chris/.bullshit/rotate.sh --down")
+        , ("M-<Left>", spawn "/home/chris/.xmonad/scripts/rotate.sh --left")
+        , ("M-<Right>", spawn "/home/chris/.xmonad/scripts/rotate.sh --right")
+        , ("M-<Up>", spawn "/home/chris/.xmonad/scripts/rotate.sh --up")
+        , ("M-<Down>", spawn "/home/chris/.xmonad/scripts/rotate.sh --down")
         ]
