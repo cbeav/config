@@ -10,7 +10,7 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                         , Run Com "uname" ["-s","-r"] "" 36000
                         , Run Date "%a %b %_d %Y %I:%M:%S" "date" 10
                         , Run StdinReader
-                        , Run Com "/home/chris/.bullshit/wifimobar.sh" [] "wifi" 30
+                        , Run Com "/home/chris/.xmonad/scripts/wifimobar.sh" [] "wifi" 30
                         , Run Battery        [ "--template" , "<acstatus>"
                              , "--Low"      , "10"        -- units: %
                              , "--High"     , "80"        -- units: %
